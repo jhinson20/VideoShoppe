@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="scenePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VShoppe.LoginUIController">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #668F80;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane prefHeight="400.0" prefWidth="617.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="166.0" layoutY="203.0" prefHeight="30.0" prefWidth="119.0" text="Username">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="167.0" layoutY="260.0" prefHeight="30.0" prefWidth="133.0" text="Password">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="usernameTextfield" layoutX="307.0" layoutY="207.0" onInputMethodTextChanged="#LoginUI" promptText="Username" />
+                  <PasswordField fx:id="passwordTextfield" layoutX="307.0" layoutY="266.0" onKeyTyped="#enterKeyLogin" promptText="Password" />
+                  <Button fx:id="logInButton" layoutX="308.0" layoutY="315.0" mnemonicParsing="false" onAction="#loginPress" style="-fx-background-color: #e69640;" text="Log In">
+                     <opaqueInsets>
+                        <Insets top="1.0" />
+                     </opaqueInsets>
+                  </Button>
+                  <Label fx:id="wrongLogIn" layoutX="68.0" layoutY="192.0" textFill="#1728bf" />
+                  <Button fx:id="cancelButton" layoutX="406.0" layoutY="315.0" mnemonicParsing="false" onAction="#cancelPress" style="-fx-background-color: #e69640;" text="Cancel" />
+                  <ImageView fitHeight="121.0" fitWidth="297.0" layoutX="162.0" layoutY="45.0" opacity="0.09" style="-fx-blend-mode: #7f8c83;">
+                     <image>
+                        <Image url="@../../../../../../../Users/jhins/OneDrive/Pictures/Saved%20Pictures/dvd.png" />
+                     </image>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="0.49803921580314636" green="0.5490196347236633" blue="0.5137255191802979" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

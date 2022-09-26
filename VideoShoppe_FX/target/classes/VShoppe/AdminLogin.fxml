@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="scenePane" prefHeight="766.0" prefWidth="1496.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VShoppe.AdminLoginController">
+   <children>
+      <BorderPane layoutY="88.0" prefHeight="261.0" prefWidth="768.0" style="-fx-background-color: #1C211F;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox opacity="0.73" prefHeight="43.0" prefWidth="604.0" style="-fx-background-color: #8f6d65;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="logoutButton" mnemonicParsing="false" onAction="#logoutPress" prefHeight="59.0" prefWidth="122.0" style="-fx-background-color: #422822; -fx-background-radius: 1;" text="Logout" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonPress" prefHeight="55.0" prefWidth="78.0" style="-fx-background-color: #8f6d65; -fx-border-color: #422822; -fx-border-width: 2;" text="Home" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <StackPane fx:id="hboxTab1" prefHeight="43.0" prefWidth="150.0" style="-fx-background-color: #8f6d65;">
+                     <children>
+                        <AnchorPane fx:id="hboxTab1EmployeeManagement" prefHeight="43.0" prefWidth="200.0" style="-fx-background-color: #8f6d65;">
+                           <children>
+                              <Line endX="-72.39999389648438" endY="15.999984741210938" layoutX="95.0" layoutY="2.0" startX="-91.60000610351562" startY="7.199981689453125" stroke="WHITE" />
+                              <Line endX="-62.69285202026367" endY="4.707090377807617" layoutX="86.0" layoutY="14.0" startX="-81.99996948242188" startY="12.999984741210938" stroke="WHITE" />
+                              <Button fx:id="hboxTab1EmployeeMangamentButton" layoutX="33.0" mnemonicParsing="false" onAction="#employeeManagementPress" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #8f6d65; -fx-border-color: #422822; -fx-border-width: 2;" text="Emp. Management" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="hboxTab1Home" prefHeight="44.0" prefWidth="190.0" style="-fx-background-color: #8f6d65;" />
+                        <AnchorPane fx:id="hboxTab1DVDOptions" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #8f6d65;">
+                           <children>
+                              <Line endX="-72.39999389648438" endY="15.999984741210938" layoutX="105.0" layoutY="3.0" startX="-91.60000610351562" startY="7.199981689453125" stroke="WHITE" />
+                              <Line endX="-63.692901611328125" endY="1.70709228515625" layoutX="97.0" layoutY="18.0" startX="-81.99996948242188" startY="12.999984741210938" stroke="WHITE" />
+                              <Button fx:id="hboxTab1DVDOptionsButton" layoutX="59.0" layoutY="-1.0" mnemonicParsing="false" onAction="#DVDOptionsPress" prefHeight="44.0" prefWidth="97.0" style="-fx-background-color: #8f6d65; -fx-border-color: #422822; -fx-border-width: 2;" text="DVD Options" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="hboxTab1CustomerManagement" prefHeight="43.0" prefWidth="200.0" style="-fx-background-color: #8f6d65;">
+                           <children>
+                              <Line endX="-72.39999389648438" endY="15.999984741210938" layoutX="95.0" layoutY="2.0" startX="-91.60000610351562" startY="7.199981689453125" stroke="WHITE" />
+                              <Line endX="-63.692901611328125" endY="1.70709228515625" layoutX="86.0" layoutY="14.0" startX="-81.99996948242188" startY="12.999984741210938" stroke="WHITE" />
+                              <Button fx:id="hboxTab1CustomerManagementButton" layoutX="33.0" mnemonicParsing="false" onAction="#customerManagementPress" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: #8f6d65; -fx-border-color: #422822; -fx-border-width: 2;" text="Cust. Management" textFill="WHITE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="hboxTab2" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #8f6d65;">
+                     <children>
+                        <AnchorPane fx:id="hboxTab2Return" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #8f6d65;">
+                           <children>
+                              <Line endX="-72.39999389648438" endY="15.999984741210938" layoutX="105.0" layoutY="3.0" startX="-91.60000610351562" startY="7.199981689453125" stroke="WHITE" />
+                              <Line endX="-63.692901611328125" endY="1.70709228515625" layoutX="97.0" layoutY="18.0" startX="-81.99996948242188" startY="12.999984741210938" stroke="WHITE" />
+                              <Button fx:id="hboxTab2DVDOptionsReturnPress" layoutX="100.0" layoutY="-3.0" mnemonicParsing="false" onAction="#DVDOptionsReturnMenuButtonPress" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: #8f6d65; -fx-border-color: #422822; -fx-border-width: 2;" text="DVD Return" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="hboxTab2Inventory" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #8f6d65;">
+                           <children>
+                              <Line endX="-72.39999389648438" endY="15.999984741210938" layoutX="105.0" layoutY="3.0" startX="-91.60000610351562" startY="7.199981689453125" stroke="WHITE" />
+                              <Line endX="-63.692901611328125" endY="1.70709228515625" layoutX="97.0" layoutY="18.0" startX="-81.99996948242188" startY="12.999984741210938" stroke="WHITE" />
+                              <Button fx:id="hboxTab2DVDOptionsInventoryManagement" layoutX="100.0" layoutY="-3.0" mnemonicParsing="false" onAction="#DVDOptionsInventoryManagementPress" prefHeight="44.0" prefWidth="152.0" style="-fx-background-color: #8f6d65; -fx-border-color: #422822; -fx-border-width: 2;" text="Inventory Management" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="hboxTab2Attribute" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #8f6d65;">
+                           <children>
+                              <Line endX="-72.39999389648438" endY="15.999984741210938" layoutX="105.0" layoutY="3.0" startX="-91.60000610351562" startY="7.199981689453125" stroke="WHITE" />
+                              <Line endX="-63.692901611328125" endY="1.70709228515625" layoutX="97.0" layoutY="18.0" startX="-81.99996948242188" startY="12.999984741210938" stroke="WHITE" />
+                              <Button fx:id="hboxTab2DVDOptionsAttributeManagementPress" layoutX="100.0" layoutY="-3.0" mnemonicParsing="false" onAction="#DVDOptionsAttributeManagementPress" prefHeight="44.0" prefWidth="152.0" style="-fx-background-color: #8f6d65; -fx-border-color: #422822; -fx-border-width: 2;" text="Attribute Management" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="hboxTab2Home" prefHeight="43.0" prefWidth="200.0" style="-fx-background-color: #8f6d65;" />
+                        <AnchorPane fx:id="hboxTab2Transaction" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #8f6d65;">
+                           <children>
+                              <Line endX="-72.39999389648438" endY="15.999984741210938" layoutX="105.0" layoutY="3.0" startX="-91.60000610351562" startY="7.199981689453125" stroke="WHITE" />
+                              <Line endX="-63.692901611328125" endY="1.70709228515625" layoutX="97.0" layoutY="18.0" startX="-81.99996948242188" startY="12.999984741210938" stroke="WHITE" />
+                              <Button fx:id="hboxTab2DVDOptionsTransactionPress" layoutX="100.0" layoutY="-3.0" mnemonicParsing="false" onAction="#DVDOptionsTransactionPress" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: #8f6d65; -fx-border-color: #422822; -fx-border-width: 2;" text="DVD Transaction" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="hboxTab3" prefHeight="44.0" prefWidth="250.0">
+                     <children>
+                        <AnchorPane fx:id="hboxTab3Home" prefHeight="44.0" prefWidth="848.0" style="-fx-background-color: #8f6d65;" />
+                     </children>
+                  </StackPane>
+                  <StackPane fx:id="hboxTab4" prefHeight="44.0" prefWidth="250.0">
+                     <children>
+                        <AnchorPane fx:id="hboxTab4Home" prefHeight="44.0" prefWidth="186.0" style="-fx-background-color: #8f6d65;" />
+                     </children>
+                  </StackPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <left>
+            <StackPane prefHeight="483.0" prefWidth="124.0" style="-fx-background-color: #e69640;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="vboxPaneDVDOptions" prefHeight="558.0" prefWidth="124.0" style="-fx-background-color: #e69640;">
+                     <children>
+                        <VBox fx:id="vboxDVDOptions" opacity="0.83" prefHeight="429.0" prefWidth="124.0" style="-fx-background-color: #C00000;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button fx:id="DVDOptionsReturnMenuButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#DVDOptionsReturnMenuButtonPress" prefHeight="300.0" prefWidth="100.0" style="-fx-background-color: #e69640; -fx-background-radius: 1; -fx-border-color: #715C61; -fx-border-width: 3;" text="DVD &#10;Return" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="vboxDVDOptionsTransactionMenu" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#DVDOptionsTransactionPress" prefHeight="300.0" prefWidth="100.0" style="-fx-background-color: #e69640; -fx-background-radius: 1; -fx-border-color: #715C61; -fx-border-width: 3;" text="DVD&#10;Transaction" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="DVDOptionsInventoryManagementButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#DVDOptionsInventoryManagementPress" prefHeight="299.0" prefWidth="124.0" style="-fx-background-color: #e69640; -fx-background-radius: 1; -fx-border-color: #715C61; -fx-border-width: 3;" text="Inventory&#10;Management&#10;" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="DVDOptionsInventoryManagementButton1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#DVDOptionsAttributeManagementPress" prefHeight="299.0" prefWidth="124.0" style="-fx-background-color: #e69640; -fx-background-radius: 1; -fx-border-color: #715C61; -fx-border-width: 3;" text="Attribute&#10;Management&#10;" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="vboxPaneHome" prefHeight="558.0" prefWidth="124.0" style="-fx-background-color: #e69640;">
+                     <children>
+                        <VBox fx:id="vboxHome" opacity="0.83" prefHeight="429.0" prefWidth="124.0" style="-fx-background-color: #C00000;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Button fx:id="DVDOptionsButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#DVDOptionsPress" prefHeight="300.0" prefWidth="100.0" style="-fx-background-color: #e69640; -fx-background-radius: 1; -fx-border-color: #715C61; -fx-border-width: 3;" text="DVD&#10;Options" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="customerManagementButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#customerManagementPress" prefHeight="300.0" prefWidth="124.0" style="-fx-background-color: #e69640; -fx-background-radius: 1; -fx-border-color: #715C61; -fx-border-width: 3;" text="Customer &#10;Management" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button fx:id="employeeManagementButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#employeeManagementPress" prefHeight="300.0" prefWidth="124.0" style="-fx-background-color: #e69640; -fx-background-radius: 1; -fx-border-color: #715C61; -fx-border-width: 3;" text="Employee &#10;Management" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </left>
+         <center>
+            <StackPane fx:id="middleStackPane" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="homePane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #668f80;" />
+                  <AnchorPane fx:id="DVDOptionsReturnPane" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #668F80;" translateX="1.0" translateY="1.0" translateZ="1.0" StackPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="DVDOptionsDVDIDTextField" layoutX="469.0" layoutY="379.0" maxWidth="-Infinity" prefHeight="38.0" prefWidth="309.0" promptText="Enter DVD ID">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="DVDOptionsDVDIDEnterButton" layoutX="868.0" layoutY="376.0" mnemonicParsing="false" onAction="#DVDReturn" prefHeight="44.0" prefWidth="98.0" style="-fx-background-color: #e69640;" text="Enter">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Text layoutX="541.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DVD Return" textAlignment="CENTER" wrappingWidth="166.47344970703125">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="DVDStockChange" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #668f80;">
+                     <children>
+                        <Text layoutX="531.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DVD Stock Change">
+                           <font>
+                              <Font size="37.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="350.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current DVD:">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Text>
+                        <TableView layoutX="598.0" layoutY="292.0" prefHeight="95.0" prefWidth="464.0">
+                          <columns>
+                            <TableColumn prefWidth="100.0" text="ID" />
+                            <TableColumn prefWidth="284.00006103515625" text="Title" />
+                              <TableColumn prefWidth="75.0" text="In-Stock" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="442.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock:">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="598.0" layoutY="472.0" prefHeight="46.0" prefWidth="290.0" />
+                        <Button fx:id="DVDOptionsDVDSaleButton1" layoutX="947.0" layoutY="473.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="114.0" style="-fx-background-color: #e69640;" text="Update Stock">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="attributeSearch" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #668F80;">
+                     <children>
+                        <Text layoutX="542.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attribute Search" textAlignment="CENTER" wrappingWidth="194.47344970703125">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="DVDOptionsDVDSearchTextField11" layoutX="142.0" layoutY="366.0" prefHeight="47.0" prefWidth="406.0" promptText="Enter Attribute Name">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TableView layoutX="696.0" layoutY="203.0" prefHeight="338.0" prefWidth="486.0">
+                           <columns>
+                              <TableColumn prefWidth="177.60003662109375" text="Name" />
+                              <TableColumn prefWidth="145.5999755859375" text="Description" />
+                              <TableColumn prefWidth="158.4000244140625" text="Date of Birth" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="CustomerSelectButton1" layoutX="1044.0" layoutY="603.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #e69640;" text="Select Attribute">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="DVDOptionsAttributeManagement" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #668F80;">
+                     <children>
+                        <Text layoutX="598.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attribute Managment" textAlignment="CENTER" wrappingWidth="194.47344970703125">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="DVDOptionsDVDStockChange1" layoutX="528.0" layoutY="503.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="316.0" style="-fx-background-color: #e69640;" text="Edit Existing Genre/Movie Person">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="DVDOptionsDVDNewEntry11" layoutX="573.0" layoutY="305.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="243.0" style="-fx-background-color: #e69640;" text="Create New Genre">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="DVDOptionsDVDNewEntry1" layoutX="573.0" layoutY="403.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="243.0" style="-fx-background-color: #e69640;" text="Create New Movie Person">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="DVDOptionsNewDVDEntry" prefHeight="722.0" prefWidth="1242.0" style="-fx-background-color: #668f80;">
+                     <children>
+                        <Text layoutX="486.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New DVD Entry">
+                           <font>
+                              <Font size="37.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="212.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" wrappingWidth="75.81341552734375">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="288.0" layoutY="238.0" promptText="DVD Title">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <DatePicker layoutX="299.0" layoutY="339.0" prefHeight="32.0" prefWidth="198.0" />
+                        <Text layoutX="65.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Production" wrappingWidth="227.81338500976562">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <ChoiceBox layoutX="308.0" layoutY="442.0" prefHeight="30.0" prefWidth="177.0" />
+                        <Text layoutX="136.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rent or Sale" wrappingWidth="160.6134033203125">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TableView layoutX="675.0" layoutY="297.0" prefHeight="219.0" prefWidth="337.0">
+                          <columns>
+                            <TableColumn prefWidth="101.5999755859375" text="Attribute Name" />
+                            <TableColumn prefWidth="235.19997558593752" text="Description" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="711.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attribute Search" wrappingWidth="183.8134765625">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="675.0" layoutY="240.0" prefHeight="38.0" prefWidth="250.0" promptText="Enter Movie Person or Genre">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="DVDOptionsDVDSelectionButton1" layoutX="810.0" layoutY="546.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="125.0" style="-fx-background-color: #e69640;" text="Select Attribute">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Text layoutX="1041.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Attributes" wrappingWidth="207.0135498046875">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TableView layoutX="1134.0" layoutY="241.0" prefHeight="274.0" prefWidth="113.0">
+                          <columns>
+                            <TableColumn prefWidth="112.8000732421875" text="Attribute Name" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="DVDOptionsDVDSelectionButton11" layoutX="1122.0" layoutY="547.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="137.0" style="-fx-background-color: #e69640;" text="Remove Attribute">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="DVDOptionsDVDSelectionButton12" layoutX="1102.0" layoutY="648.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="157.0" style="-fx-background-color: #e69640;" text="Add/Update Movie">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="genreEditor" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #668f80;">
+                     <children>
+                        <Text layoutX="531.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre Editor">
+                           <font>
+                              <Font size="37.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="121.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Genre:">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Text>
+                        <TableView layoutX="369.0" layoutY="254.0" prefHeight="95.0" prefWidth="608.0">
+                           <columns>
+                              <TableColumn prefWidth="100.0" text="ID" />
+                              <TableColumn prefWidth="117.5999755859375" text="Name" />
+                              <TableColumn prefWidth="389.5999755859375" text="Description" />
+                           </columns>
+                        </TableView>
+                        <Text layoutX="205.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="369.0" layoutY="434.0" prefHeight="46.0" prefWidth="290.0" />
+                        <Button fx:id="DVDOptionsDVDSaleButton11" layoutX="1139.0" layoutY="435.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="114.0" style="-fx-background-color: #e69640;" text="Update Genre">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <TextArea layoutX="871.0" layoutY="434.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Text layoutX="694.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description:">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="moviePersonEditor" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #668f80;">
+                     <children>
+                        <Text layoutX="531.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Movie Person Editor">
+                           <font>
+                              <Font size="37.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="242.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Movie Person:">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Text>
+                        <TableView layoutX="558.0" layoutY="243.0" prefHeight="116.0" prefWidth="498.0">
+                           <columns>
+                              <TableColumn prefWidth="100.0" text="ID" />
+                              <TableColumn prefWidth="160.800048828125" text="Name" />
+                              <TableColumn prefWidth="129.5999755859375" text="Date of Birth" />
+                              <TableColumn prefWidth="108.7999267578125" text="Type" />
+                           </columns>
+                        </TableView>
+                        <Text layoutX="443.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="558.0" layoutY="398.0" prefHeight="46.0" prefWidth="355.0" />
+                        <Button fx:id="DVDOptionsDVDSaleButton111" layoutX="896.0" layoutY="566.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="160.0" style="-fx-background-color: #e69640;" text="Update Move Person">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Text layoutX="359.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth:">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Text>
+                        <DatePicker layoutX="556.0" layoutY="572.0" prefHeight="34.0" prefWidth="279.0" />
+                        <Text layoutX="384.0" layoutY="518.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role Types:">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Text>
+                        <CheckBox layoutX="552.0" layoutY="492.0" mnemonicParsing="false" text="Actor">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="654.0" layoutY="492.0" mnemonicParsing="false" text="Director">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox layoutX="786.0" layoutY="492.0" mnemonicParsing="false" text="Producer">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="EmployeeManagementMenu" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #668F80;">
+                     <children>
+                        <Text layoutX="595.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Management" textAlignment="CENTER" wrappingWidth="214.47344970703125">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="DVDOptionsDVDStockChange111" layoutX="578.0" layoutY="447.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="249.0" style="-fx-background-color: #e69640;" text="Edit Existing Employee">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="DVDOptionsDVDNewEntry111" layoutX="581.0" layoutY="349.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="243.0" style="-fx-background-color: #e69640;" text="Create New Employee">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="EmployeeManagementSearchPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #668F80;">
+                     <children>
+                        <TextField fx:id="customerSearchTextField1" layoutX="272.0" layoutY="376.0" prefHeight="41.0" prefWidth="343.0" promptText="Enter Name">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="560.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Search" textAlignment="CENTER" wrappingWidth="213.990966796875">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="creditCardValidationButton21" layoutX="1048.0" layoutY="578.0" mnemonicParsing="false" style="-fx-background-color: #e69640;" text="Select Employee">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <TableView layoutX="742.0" layoutY="235.0" prefHeight="290.0" prefWidth="426.0">
+                           <columns>
+                              <TableColumn prefWidth="107.199951171875" text="ID" />
+                              <TableColumn prefWidth="116.800048828125" text="First Name" />
+                              <TableColumn prefWidth="88.0001220703125" text="Last Name" />
+                              <TableColumn prefWidth="111.19997558593752" text="Type" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="EmployeeManagementEmployeeEditor" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #668F80;">
+                     <children>
+                        <Text layoutX="137.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="66.93670654296875">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="129.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="138.13671875">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="130.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birth Date" wrappingWidth="130.13671875">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="135.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="144.53668212890625">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="135.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" wrappingWidth="166.93670654296875">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="135.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="166.93670654296875">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="565.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Status" wrappingWidth="183.73663330078125">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <DatePicker layoutX="310.0" layoutY="329.0" />
+                        <TextField layoutX="308.0" layoutY="219.0" prefHeight="26.0" prefWidth="188.0" />
+                        <TextField layoutX="303.0" layoutY="279.0" prefHeight="26.0" prefWidth="188.0" />
+                        <TextField layoutX="306.0" layoutY="381.0" prefHeight="26.0" prefWidth="188.0" />
+                        <TextField layoutX="306.0" layoutY="437.0" prefHeight="26.0" prefWidth="188.0" />
+                        <TextField layoutX="306.0" layoutY="488.0" prefHeight="26.0" prefWidth="188.0" />
+                        <Button fx:id="creditCardValidationButton11" layoutX="537.0" layoutY="496.0" mnemonicParsing="false" style="-fx-background-color: #e69640;" text="Create New/ Update Customer">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="546.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Employee Editor" textAlignment="CENTER" wrappingWidth="194.13665771484375">
+                           <font>
+                              <Font size="34.0" />
+                           </font>
+                        </Text>
+                        <TableView layoutX="867.0" layoutY="277.0" prefHeight="106.0" prefWidth="426.0">
+                           <columns>
+                              <TableColumn prefWidth="107.199951171875" text="ID" />
+                              <TableColumn prefWidth="116.800048828125" text="First Name" />
+                              <TableColumn prefWidth="88.0001220703125" text="Last Name" />
+                              <TableColumn prefWidth="111.19997558593752" text="Date of Birth" />
+                           </columns>
+                        </TableView>
+                        <Text layoutX="1024.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Customer" wrappingWidth="132.53668212890625">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <ChoiceBox layoutX="577.0" layoutY="364.0" prefHeight="26.0" prefWidth="158.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="customerSearchPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #668F80;">
+                     <children>
+                        <TextField fx:id="customerSearchTextField" layoutX="272.0" layoutY="376.0" onKeyTyped="#customerSearch" prefHeight="41.0" prefWidth="343.0" promptText="Enter Name or DL Number">
+                           <font>
+                              <Font size="19.0" />
+                           </font></TextField>
+                        <Text layoutX="560.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Search" textAlignment="CENTER" wrappingWidth="213.990966796875">
+                           <font>
+                              <Font size="33.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="1110.0" layoutY="571.0" mnemonicParsing="false" onAction="#customerSearchSelectPress" style="-fx-background-color: #e69640;" text="Select Customer">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <TableView fx:id="customerSearchTable" layoutX="742.0" layoutY="235.0" prefHeight="290.0" prefWidth="488.0">
+                           <columns>
+                              <TableColumn fx:id="customerSearchIDColumn" prefWidth="107.199951171875" text="ID" />
+                              <TableColumn fx:id="firstNameC" prefWidth="128.0" text="First Name" />
+                              <TableColumn fx:id="lastNameC" prefWidth="126.4000244140625" text="Last Name" />
+                              <TableColumn fx:id="customerSearchDateOfBirthColumn" prefWidth="127.199951171875" text="Date of Birth" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="customerManagementMenuPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #668F80;">
+                     <children>
+                        <Text layoutX="595.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Management" textAlignment="CENTER" wrappingWidth="214.47344970703125">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="DVDOptionsDVDStockChange11" layoutX="578.0" layoutY="447.0" mnemonicParsing="false" onAction="#editExistingCustomerPress" prefHeight="63.0" prefWidth="249.0" style="-fx-background-color: #e69640;" text="Edit Existing Customer">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="DVDOptionsDVDNewEntry11" layoutX="581.0" layoutY="349.0" mnemonicParsing="false" onAction="#createNewCustomerPress" prefHeight="62.0" prefWidth="243.0" style="-fx-background-color: #e69640;" text="Create New Customer">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="customerManagementInformationPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #668F80;">
+                     <children>
+                        <Text layoutX="137.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="66.93670654296875">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="129.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DL Number" wrappingWidth="138.13671875">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="130.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birth Date" wrappingWidth="130.13671875">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="135.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" wrappingWidth="144.53668212890625">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="135.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" wrappingWidth="166.93670654296875">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="135.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="166.93670654296875">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="602.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit Card" wrappingWidth="132.53668212890625">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="574.0" layoutY="266.0" prefHeight="26.0" prefWidth="188.0" />
+                        <Text layoutX="637.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CCV" wrappingWidth="62.13665771484375">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="574.0" layoutY="352.0" prefHeight="26.0" prefWidth="188.0" />
+                        <Text layoutX="580.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expiration Date" wrappingWidth="176.53668212890625">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <DatePicker layoutX="580.0" layoutY="432.0" />
+                        <TextField fx:id="customerEditNameTextField" layoutX="308.0" layoutY="219.0" prefHeight="26.0" prefWidth="188.0" />
+                        <TextField fx:id="customerEditDLTextField" layoutX="303.0" layoutY="279.0" prefHeight="26.0" prefWidth="188.0" />
+                        <TextField fx:id="customerEditAddressTextField" layoutX="306.0" layoutY="381.0" prefHeight="26.0" prefWidth="188.0" />
+                        <TextField fx:id="customerEditPhoneTextField" layoutX="306.0" layoutY="437.0" prefHeight="26.0" prefWidth="188.0" />
+                        <TextField fx:id="customerEditEmailTextField" layoutX="306.0" layoutY="488.0" prefHeight="26.0" prefWidth="188.0" />
+                        <Button fx:id="creditCardValidationButton" layoutX="642.0" layoutY="488.0" mnemonicParsing="false" style="-fx-background-color: #e69640;" text="Validate">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="creditCardValidationButton1" layoutX="582.0" layoutY="545.0" mnemonicParsing="false" onAction="#customerCreationEditPress" style="-fx-background-color: #e69640;" text="Create New/ Update Customer">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Text layoutX="546.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Editor" textAlignment="CENTER" wrappingWidth="194.13665771484375">
+                           <font>
+                              <Font size="34.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="customerEditorTable" layoutX="867.0" layoutY="277.0" prefHeight="106.0" prefWidth="426.0">
+                          <columns>
+                            <TableColumn fx:id="customerEditIDColumn" prefWidth="107.199951171875" text="ID" />
+                            <TableColumn fx:id="customerEditFirstNameColumn" prefWidth="116.800048828125" text="First Name" />
+                              <TableColumn fx:id="customerEditLastNameColumn" prefWidth="88.0001220703125" text="Last Name" />
+                              <TableColumn fx:id="customerEditBirthDateColumn" prefWidth="111.19997558593752" text="Date of Birth" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="1024.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Customer" wrappingWidth="132.53668212890625">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="customerEditBirthDateTextField" layoutX="308.0" layoutY="330.0" prefHeight="26.0" prefWidth="188.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="DVDOptionsInventoryManagementPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #668F80;">
+                     <children>
+                        <Text layoutX="590.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory Management" textAlignment="CENTER" wrappingWidth="220.87347412109375">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="DVDOptionsDVDNewEntry" layoutX="586.0" layoutY="382.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="227.0" style="-fx-background-color: #e69640;" text="Create New DVD Entry">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="DVDOptionsDVDStockChange" layoutX="572.0" layoutY="502.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="255.0" style="-fx-background-color: #e69640;" text="Add Stock of Existing DVD">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="DVDOptionsTransactionPane" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #668F80;">
+                     <children>
+                        <Text layoutX="591.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DVD Transaction" textAlignment="CENTER" wrappingWidth="194.47344970703125">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="movieSearchTextField" layoutX="180.0" layoutY="408.0" onKeyTyped="#movieSearch" prefHeight="47.0" prefWidth="362.0" promptText="Enter DVD Name, Movie Person, or ID">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </TextField>
+                        <TableView fx:id="movieSearchTable" layoutX="583.0" layoutY="221.0" prefHeight="374.0" prefWidth="756.0">
+                          <columns>
+                            <TableColumn fx:id="movieSearchIDColumn" prefWidth="102.4000244140625" text="ID" />
+                            <TableColumn fx:id="movieSearchTitleColumn" prefWidth="244.7999267578125" text="Title" />
+                              <TableColumn fx:id="movieSearchDateColumn" prefWidth="135.199951171875" text="Production Date" />
+                              <TableColumn fx:id="movieSearchPriceColumn" prefWidth="96.0" text="Price" />
+                              <TableColumn fx:id="movieSearchQuantityColumn" prefWidth="86.39990234375" text="Quantity" />
+                              <TableColumn fx:id="movieSearchStatusColumn" prefWidth="94.400146484375" text="Status" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="6.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected Customer" textAlignment="CENTER" wrappingWidth="208.87347412109375">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="selectedCustomerTable" layoutX="179.0" layoutY="246.0" prefHeight="79.0" prefWidth="363.0">
+                          <columns>
+                            <TableColumn fx:id="selectedCustomerDLNumber" prefWidth="112.79998779296875" text="DL Number" />
+                            <TableColumn fx:id="selectedCustomerFirstName" prefWidth="128.79998779296875" text="First Name" />
+                              <TableColumn fx:id="selectedCustomerLastName" prefWidth="120.79997558593749" text="Last Name" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="DVDOptionsDVDRentButton" layoutX="1240.0" layoutY="643.0" mnemonicParsing="false" onAction="#rentDVDPress" prefHeight="44.0" prefWidth="98.0" style="-fx-background-color: #e69640;" text="Rent DVD">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Text layoutX="55.0" layoutY="422.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Movie" textAlignment="CENTER" wrappingWidth="109.67350769042969">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children></StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
