@@ -19,6 +19,6 @@ Unfortunately, the project was not completed by the end of the due date and cann
 
 ## Credits
 
-Micheal Knight - 
-Stanislaw Kansiewicz - 
-Jordan Hinson - 
+Micheal Knight - mknight8034@g.fmarion.edu
+Stanislaw Kansiewicz - stanislaw.kansiewicz@g.fmarion.edu
+Jordan Hinson - jhinson2012@gmail.com
